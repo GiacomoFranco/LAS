@@ -1,1 +1,103 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Figtree, sans-serif;
+  scrollbar-width: thin;
+}
+
+:root {
+  --gray: #524C4F;
+  --white: #E9E7EA;
+  --magenta-100: #FF1A97;
+  --magenta-200: #E6007E;
+  --magenta-300: #C2006B;
+  --magenta-400: #73003F;
+  --magenta-500: #4D002A;
+  --magenta-600: #1A000E;
+  --magenta-700: #0A0005;
+}
+
+
+html {
+  font-size: 62.5%;
+  scrollbar-width: auto;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  color: var(--white);
+  font-size: 1.6rem;
+  overflow-x: hidden;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+h1 {
+  font: var(--text-heading-1);
+}
+
+h2 {
+  font: var(--text-heading-2);
+}
+
+h3 {
+  font: var(--text-heading-3);
+}
+
+h4 {
+  font: var(--text-heading-4);
+}
+
+h5 {
+  font: var(--text-heading-5);
+}
+
+h6 {
+  font: var(--text-heading-6);
+}
+
+p {
+  font: var(--text-paragraph);
+}
+
+a {
+  color: var(--magenta-200);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+:focus,
+:focus-visible {
+  outline-offset: -2px;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% center;
+  }
+
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.skeleton-shimmer {
+  border-radius: 0.4rem;
+  animation: skeleton-shimmer 8s infinite linear;
+  background: linear-gradient(
+    80deg,
+    var(--neutral-bg-default) 0%,
+    rgb(from var(--neutral-bg-hover) r g b / 50%) 50%,
+    var(--neutral-bg-default) 100%
+  );
+  background-size: 200% 100%;
+}
