@@ -27,7 +27,9 @@
     </div>
     <div class="social">
       @for (social of socials; track $index) {
-        <img [src]="social.icon" [alt]="social.alt" />
+        <a target="_blank" [href]="social.link">
+          <img [src]="social.icon" [alt]="social.alt" />
+        </a>
       }
     </div>
   </div>
